@@ -1,5 +1,6 @@
 #!/usr/bin/zsh
 
+# git shortcuts
 alias gs="git status"
 alias ga="git add -A ."
 alias gc="git commit"
@@ -15,4 +16,6 @@ alias ggr="git log --reverse --pretty=format:'%C(bold red)%h%Creset -%C(bold yel
 alias gcp="git cherry-pick"
 alias gbg="git bisect good"
 alias gbb="git bisect bad"
+
+# other shortcuts
 alias bll='bilili -d ~/视频/ -c \"$(cat $HOME/bilili.sessdata)\" --disable-proxy --danmaku=ass --playlist-type=m3u -y --use-mirrors'
