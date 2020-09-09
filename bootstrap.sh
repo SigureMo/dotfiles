@@ -1,12 +1,11 @@
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/SigureMo/dotfiles/master/bootstrap.sh)"
 
 # get system type
-release=$(uname -r)
-if echo $release | grep -qwi "darwin";then
+if [[ ${release,,} =~ "darwin" ]];then
     os_name="macosx"
-elif echo $release | grep -qwi "manjaro";then
+elif [[ ${release,,} =~ "manjaro" ]];then
     os_name="manjaro"
-elif echo $release | grep -qwi "azure";then
+elif [[ ${release,,} =~ "azure" ]];then
     os_name="azure"
 else
     echo "Other OS: $release"
