@@ -1,28 +1,14 @@
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/SigureMo/dotfiles/master/bootstrap.sh)"
 
-# get system type
-if [[ ${release,,} =~ "darwin" ]];then
-    os_name="macosx"
-elif [[ ${release,,} =~ "manjaro" ]];then
-    os_name="manjaro"
-elif [[ ${release,,} =~ "azure" ]];then
-    os_name="azure"
-else
-    echo "Other OS: $release"
-fi
+# clone this repo
+git clone https://github.com/SigureMo/dotfiles ~/.dotfiles
+. ~/.dotfiles/zsh/functions.zsh
 
 # init oh my zsh and plugins
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-if [ $os_name == "manjaro" ]; then
-    sudo pacman -S autojump
-elif [ $os_name == "azure" ]; then
-    sudo apt install autojump
-fi
-
-# clone this repo
-git clone https://github.com/SigureMo/dotfiles ~/.dotfiles
+install_autojump
 
 # Source dot files
 echo '. ~/.dotfiles/zsh/.zprofile' >> ~/.zprofile

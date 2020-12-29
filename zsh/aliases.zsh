@@ -18,4 +18,4 @@ alias gbg="git bisect good"
 alias gbb="git bisect bad"
 
 # other shortcuts
-alias bll='bilili -d ~/视频/ -c \"$(cat $HOME/bilili.sessdata)\" --disable-proxy --danmaku=ass --playlist-type=m3u -y --use-mirrors'
+alias bll='bilili -d ~/Movies/bilili/ -c \"$(cat $HOME/.sessdata)\" --disable-proxy --danmaku=ass --playlist-type=m3u -y --use-mirrors'
