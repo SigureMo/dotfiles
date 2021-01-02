@@ -13,5 +13,5 @@ install_autojump
 # Source dot files
 echo '. ~/.dotfiles/zsh/.zprofile' >> ~/.zprofile
 source ~/.zprofile
-echo '. ~/.dotfiles/zsh/.zshrc' >> ~/.zshrc
+echo '. ~/.dotfiles/zsh/.zshrc' > ~/.zshrc
 source ~/.zshrc
