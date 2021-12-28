@@ -2,11 +2,9 @@
 
 # clone this repo
 git clone https://github.com/SigureMo/dotfiles ~/.dotfiles
-. ~/.dotfiles/zsh/functions.zsh
 
 # init oh my zsh and plugins
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-install_autojump
 
 # Source dot files
 echo '. ~/.dotfiles/zsh/.zprofile' >> ~/.zprofile
