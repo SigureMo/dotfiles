@@ -19,5 +19,4 @@ alias gbb="git bisect bad"
 
 # other shortcuts
 alias python="python3"
-alias bll='bilili -d ~/Movies/bilili/ -c `cat ~/.sessdata` --disable-proxy --danmaku=ass --playlist-type=m3u -y --use-mirrors'
-alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` --debug -n 16 --vcodec="hevc:copy" --alias-file=`echo ~/.yutto_alias`'
+alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` -n 16 --vcodec="av1:copy" --alias-file=`echo ~/.yutto_alias`'
