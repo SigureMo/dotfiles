@@ -102,10 +102,10 @@ function nya() {
         colored-echo "> upgrade $app" magenta defaultbg bold
         case $app in
             "brew")
-            brew autoremove
+            brew upgrade
             ;;
             "pnpm")
-            pnpm store prune
+            pnpm -g upgrade
             ;;
             "cargo")
             # need `cargo install cargo-update`
