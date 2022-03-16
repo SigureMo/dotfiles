@@ -87,10 +87,14 @@ function nya() {
             "conda")
             conda clean --all -y
             ;;
+            "pip")
+            pip cache purge
+            ;;
             "-A")
             nya clean brew
             nya clean pnpm
             nya clean cargo
+            nya clean pip
             nya clean conda
             ;;
             *)
@@ -121,12 +125,21 @@ function nya() {
             "conda")
             conda update --all -y
             ;;
+            "pip")
+            pip install pip -U
+            ;;
+            "pipx")
+            pipx upgrade-all
+            ;;
             "-A")
             nya upgrade brew
             nya upgrade pnpm
             nya upgrade cargo
             nya upgrade rustup
             nya upgrade zimfw
+            nya upgrade conda
+            nya upgrade pip
+            nya upgrade pipx
             ;;
             *)
             colored-echo "Unknown app: $app" red
