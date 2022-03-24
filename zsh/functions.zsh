@@ -70,7 +70,7 @@ function nya() {
     action=$1
     app=$2
     case $action in
-        "clean")
+        "clean"|"c")
         colored-echo "> clean $app" blue defaultbg bold
         case $app in
             "brew")
@@ -90,7 +90,7 @@ function nya() {
             "pip")
             pip cache purge
             ;;
-            "-A")
+            "all"|"a")
             nya clean brew
             nya clean pnpm
             nya clean cargo
@@ -102,7 +102,7 @@ function nya() {
             ;;
         esac
         ;;
-        "upgrade")
+        "upgrade"|"u")
         colored-echo "> upgrade $app" magenta defaultbg bold
         case $app in
             "brew")
@@ -123,6 +123,7 @@ function nya() {
             zimfw upgrade
             ;;
             "conda")
+            conda update -n base conda -y
             conda update --all -y
             ;;
             "pip")
@@ -131,7 +132,7 @@ function nya() {
             "pipx")
             pipx upgrade-all
             ;;
-            "-A")
+            "all"|"a")
             nya upgrade brew
             nya upgrade pnpm
             nya upgrade cargo
@@ -146,9 +147,9 @@ function nya() {
             ;;
         esac
         ;;
-        "-A")
-        nya upgrade -A
-        nya clean -A
+        "all"|"a")
+        nya u a
+        nya c a
         ;;
         *)
         colored-echo "Unknown action: $action" red
