@@ -18,5 +18,4 @@ alias gbg="git bisect good"
 alias gbb="git bisect bad"
 
 # other shortcuts
-alias python="python3"
 alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` -n 16 --vcodec="av1:copy" --alias-file=`echo ~/.yutto_alias`'

@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/SigureMo/dotfiles/main/bootstrap.sh)"
 
 # clone this repo
