@@ -90,12 +90,16 @@ function nya() {
             "pip")
             pip cache purge
             ;;
+            "pre-commit")
+            pre-commit gc
+            ;;
             "all"|"a")
             nya clean brew
             nya clean pnpm
             nya clean cargo
             nya clean pip
             nya clean conda
+            nya clean pre-commit
             ;;
             *)
             colored-echo "Unknown app: $app" red
