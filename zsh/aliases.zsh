@@ -16,7 +16,7 @@ alias ggr="git log --reverse --pretty=format:'%C(bold red)%h%Creset -%C(bold yel
 alias gcp="git cherry-pick"
 alias gbg="git bisect good"
 alias gbb="git bisect bad"
-alias gsn="git fetch upstream `git rev-parse --abbrev-ref HEAD` && git merge upstream/`git rev-parse --abbrev-ref HEAD` && git push"
+alias gsn='git fetch upstream `git rev-parse --abbrev-ref HEAD` && git merge upstream/`git rev-parse --abbrev-ref HEAD` && git push'
 alias gsw="git switch"
 
 # other shortcuts
