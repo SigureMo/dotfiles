@@ -88,7 +88,7 @@ function nya() {
             conda clean --all -y
             ;;
             "pip")
-            pip cache purge
+            pip3 cache purge
             ;;
             "pre-commit")
             pre-commit gc
@@ -131,7 +131,7 @@ function nya() {
             conda update --all -y
             ;;
             "pip")
-            pip install pip -U
+            pip3 install pip -U
             ;;
             "pipx")
             pipx upgrade-all
@@ -161,3 +161,10 @@ function nya() {
     esac
 }
 
+function set-sessdata() {
+    SESSDATA=$1
+    SESSDATA_STORE=$HOME/.sessdata
+    rm $SESSDATA_STORE
+    echo $SESSDATA > $SESSDATA_STORE
+    colored-echo "Successfully set SESSDATA to ${SESSDATA}" green
+}
