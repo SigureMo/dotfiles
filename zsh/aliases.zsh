@@ -18,6 +18,10 @@ alias gbg="git bisect good"
 alias gbb="git bisect bad"
 alias gsn='git fetch upstream `git rev-parse --abbrev-ref HEAD` && git merge upstream/`git rev-parse --abbrev-ref HEAD` && git push'
 alias gsw="git switch"
+alias gck="git checkout"
+alias gempty="git commit -m 'empty commit, re-trigger all ci' --allow-empty"
+alias gpr="gh pr create --web"
 
 # other shortcuts
-alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` -n 16 --vcodec="av1:copy" --alias-file=`echo ~/.yutto_alias`'
+alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` -n 16 --vcodec="av1:copy" --no-danmaku --alias-file=`echo ~/.yutto_alias`'
+alias yttx='ytt ~/.yutto_subscription'

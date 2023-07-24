@@ -93,6 +93,9 @@ function nya() {
             "pre-commit")
             pre-commit gc
             ;;
+            "ruff")
+            (cd ~; ruff clean)
+            ;;
             "all"|"a")
             nya clean brew
             nya clean pnpm
@@ -100,6 +103,7 @@ function nya() {
             nya clean pip
             nya clean conda
             nya clean pre-commit
+            nya clean ruff
             ;;
             *)
             colored-echo "Unknown app: $app" red
