@@ -138,7 +138,7 @@ function nya() {
             pip3 install pip -U
             ;;
             "pipx")
-            pipx upgrade-all
+            pipx upgrade-all || pipx reinstall-all
             ;;
             "all"|"a")
             nya upgrade brew
