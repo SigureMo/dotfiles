@@ -81,6 +81,8 @@ function nya() {
             pnpm store prune
             ;;
             "cargo")
+            # See https://blog.rust-lang.org/2023/12/11/cargo-cache-cleaning.html#manual-cleaning
+            cargo +nightly -Zgc clean gc
             # need `cargo install cargo-cache`
             cargo cache -a
             ;;
@@ -96,6 +98,9 @@ function nya() {
             "ruff")
             (cd ~; ruff clean)
             ;;
+            "ccache")
+            ccache -c
+            ;;
             "all"|"a")
             nya clean brew
             nya clean pnpm
@@ -104,6 +109,7 @@ function nya() {
             nya clean conda
             nya clean pre-commit
             nya clean ruff
+            nya clean ccache
             ;;
             *)
             colored-echo "Unknown app: $app" red
