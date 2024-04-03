@@ -98,6 +98,9 @@ function nya() {
             "ruff")
             (cd ~; ruff clean)
             ;;
+            "uv")
+            uv cache prune
+            ;;
             "ccache")
             ccache -c
             ;;
@@ -109,6 +112,7 @@ function nya() {
             nya clean conda
             nya clean pre-commit
             nya clean ruff
+            nya clean uv
             nya clean ccache
             ;;
             *)
@@ -140,9 +144,6 @@ function nya() {
             conda update -n base conda -y
             conda update --all -y
             ;;
-            "pip")
-            pip3 install pip -U
-            ;;
             "pipx")
             pipx upgrade-all || pipx reinstall-all
             ;;
@@ -153,7 +154,6 @@ function nya() {
             nya upgrade rustup
             nya upgrade zimfw
             nya upgrade conda
-            nya upgrade pip
             nya upgrade pipx
             ;;
             *)
