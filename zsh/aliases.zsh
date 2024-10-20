@@ -25,5 +25,3 @@ alias gpf="git push --force-with-lease"
 alias grc="git remote prune origin"
 
 # other shortcuts
-alias ytt='yutto -d ~/Movies/yutto/ -c `cat ~/.sessdata` -n 16 --vcodec="av1:copy" --no-danmaku --alias-file=`echo ~/.yutto_alias`'
-alias yttx='ytt ~/.yutto_subscription'

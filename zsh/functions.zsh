@@ -147,6 +147,9 @@ function nya() {
             "pipx")
             pipx upgrade-all || pipx reinstall-all
             ;;
+            "uv")
+            uv tool upgrade --all
+            ;;
             "all"|"a")
             nya upgrade brew
             nya upgrade pnpm
@@ -155,6 +158,7 @@ function nya() {
             nya upgrade zimfw
             nya upgrade conda
             nya upgrade pipx
+            nya upgrade uv
             ;;
             *)
             colored-echo "Unknown app: $app" red
