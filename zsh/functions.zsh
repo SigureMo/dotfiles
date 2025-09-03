@@ -86,9 +86,6 @@ function nya() {
             # need `cargo install cargo-cache`
             cargo cache -a
             ;;
-            "conda")
-            conda clean --all -y
-            ;;
             "pip")
             pip3 cache purge
             ;;
@@ -109,7 +106,6 @@ function nya() {
             nya clean pnpm
             nya clean cargo
             nya clean pip
-            nya clean conda
             nya clean pre-commit
             nya clean ruff
             nya clean uv
@@ -140,15 +136,12 @@ function nya() {
             zimfw update
             zimfw upgrade
             ;;
-            "conda")
-            conda update -n base conda -y
-            conda update --all -y
-            ;;
             "pipx")
             pipx upgrade-all || pipx reinstall-all
             ;;
             "uv")
             uv tool upgrade --all
+            uv python upgrade
             ;;
             "all"|"a")
             nya upgrade brew
@@ -156,7 +149,6 @@ function nya() {
             nya upgrade cargo
             nya upgrade rustup
             nya upgrade zimfw
-            nya upgrade conda
             nya upgrade pipx
             nya upgrade uv
             ;;
