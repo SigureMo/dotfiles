@@ -98,6 +98,9 @@ function nya() {
             "uv")
             uv cache prune
             ;;
+            "uv")
+            prek cache gc
+            ;;
             "ccache")
             ccache -c
             ;;
@@ -109,6 +112,7 @@ function nya() {
             nya clean pre-commit
             nya clean ruff
             nya clean uv
+            nya clean prek
             nya clean ccache
             ;;
             *)
