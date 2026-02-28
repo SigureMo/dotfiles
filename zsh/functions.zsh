@@ -178,3 +178,27 @@ function set-sessdata() {
     echo $SESSDATA > $SESSDATA_STORE
     colored-echo "Successfully set SESSDATA to ${SESSDATA}" green
 }
+
+function ai-co-author() {
+    local agent=$1
+    local author=""
+
+    case $agent in
+        copilot)
+            author="Copilot <175728472+Copilot@users.noreply.github.com>"
+            ;;
+        claude)
+            author="Claude <noreply@anthropic.com>"
+            ;;
+        codex)
+            author="Codex <codex@openai.com>"
+            ;;
+        *)
+            colored-echo "Unknown agent: $agent" red
+            colored-echo "Usage: ai-co-author <copilot|claude|codex>" yellow
+            return 1
+            ;;
+    esac
+
+    git commit --allow-empty -m "🤖 AI co-author" -m "Co-authored-by: $author"
+}
