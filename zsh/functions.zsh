@@ -200,5 +200,5 @@ function ai-co-author() {
             ;;
     esac
 
-    git commit --allow-empty -m "🤖 AI co-author" -m "Co-authored-by: $author"
+    echo "Co-authored-by: $author"
 }
