@@ -185,7 +185,7 @@ function ai-co-author() {
 
     case $agent in
         copilot)
-            author="Copilot <175728472+Copilot@users.noreply.github.com>"
+            author="Copilot <223556219+Copilot@users.noreply.github.com>"
             ;;
         claude)
             author="Claude <noreply@anthropic.com>"
