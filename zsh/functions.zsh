@@ -191,7 +191,7 @@ function ai-co-author() {
             author="Claude <noreply@anthropic.com>"
             ;;
         codex)
-            author="Codex <codex@openai.com>"
+            author="Codex <noreply@openai.com>"
             ;;
         *)
             colored-echo "Unknown agent: $agent" red
