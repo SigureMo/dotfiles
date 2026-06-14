@@ -124,7 +124,7 @@ function nya() {
         colored-echo "> upgrade $app" magenta defaultbg bold
         case $app in
             "brew")
-            brew upgrade
+            brew upgrade -y
             ;;
             "pnpm")
             pnpm -g upgrade
