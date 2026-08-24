@@ -147,6 +147,9 @@ function nya() {
             uv tool upgrade --all
             uv python upgrade
             ;;
+            "vp")
+            vp upgrade
+            ;;
             "all"|"a")
             nya upgrade brew
             nya upgrade pnpm
@@ -155,6 +158,7 @@ function nya() {
             nya upgrade zimfw
             nya upgrade pipx
             nya upgrade uv
+            nya upgrade vp
             ;;
             *)
             colored-echo "Unknown app: $app" red
